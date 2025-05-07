@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gereja Pentakosta Indonesia - Sisingamangaraja Medan</title>
+  <meta name="description" content="Website resmi Gereja Pentakosta Indonesia Sidang Sisingamangaraja Medan. Jadwal Ibadah, Galeri, Berita Gereja, dan Kontak."/>
+  <meta name="keywords" content="Gereja Pentakosta, Sidang Medan, Partamiangan, GPI Medan"/>
+  <meta name="author" content="Hasiholan Matondang"/>
+  <link rel="icon" href="images/favicon.png" type="image/png"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+    }
+    .navbar {
+      background: linear-gradient(to right, #4a2e84, #7b5cb0);
+    }
+    .navbar .nav-link {
+      color: white !important;
+    }
+    .navbar .nav-link:hover {
+      text-decoration: underline;
+    }
+    .form-login {
+      max-width: 400px;
+      margin: 100px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    .section-title h2 {
+      font-weight: 700;
+      color: #4a2e84;
+    }
+    .section-title p {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+    .card-title {
+      color: #4a2e84;
+      font-weight: bold;
+    }
+    .rounded-shadow {
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+    footer {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">GPI Sidang Sisingamangaraja</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#berita">Berita</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partamiangan">Partamiangan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Page -->
+  <div id="loginPage" class="form-login">
+    <h4 class="text-center mb-4">Login Gereja</h4>
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" id="username" class="form-control" placeholder="hasiholan.matondang"/>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" id="password" class="form-control" placeholder="Password"/>
+    </div>
+    <button class="btn btn-primary w-100" onclick="login()">Login</button>
+  </div>
+
+  <!-- Main Page -->
+  <div id="mainPage" style="display:none; padding-top: 70px;">
+    <!-- Jadwal Ibadah -->
+    <section id="jadwal" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Jadwal Ibadah</h2>
+          <p>Jadwal ibadah Rutin di GPI Sidang Sisingamangaraja Medan.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Ibadah Umum: Minggu 1, 10.00 WIB</li>
+              <li class="list-group-item">Ibadah Umum: Minggu 2, 13.00 WIB</li>
+              <li class="list-group-item">Ibadah Partamiangan: Rabu, 20.00 WIB, di rumah Ny. Nainggolan / Br. Zebua, Jl. Menteng 7 Gg Nasional Ujung</li>
+              <li class="list-group-item">Ibadah Kaum Ibu: Selasa, 16.00 WIB</li>
+              <li class="list-group-item">Ibadah Pemuda-Pemudi: Sabtu, 19.00 WIB</li>
+              <li class="list-group-item">Ibadah Sekolah Minggu: Minggu, 08.00 WIB</li>
+              <li class="list-group-item">Ibadah Pelayanan Remaja: Minggu, 08.00 WIB</li>
+              <li class="list-group-item">Ibadah Doa: Senin, 20.00 WIB</li>
+              <li class="list-group-item">Ibadah Pelayanan Kaum Bapak: Jumat, 20.00 WIB</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri" class="py-5">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Galeri Kegiatan</h2>
+          <p>Dokumentasi Acara Mini Konser GPI SM RAJA MEDAN.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-3"><img src="images_konsermini_2025/konsermini_01.jpg" class="img-fluid rounded-shadow" alt="Natal 1"></div>
+          <div class="col-md-3"><img src="images_konsermini_2025/konsermini_02.jpg" class="img-fluid rounded-shadow" alt="Natal 2"></div>
+          <div class="col-md-3"><img src="images_konsermini_2025/konsermini_01.jpg" class="img-fluid rounded-shadow" alt="Natal 3"></div>
+          <div class="col-md-3"><img src="images_konsermini_2025/konsermini_04.jpg" class="img-fluid rounded-shadow" alt="Natal 4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Berita -->
+    <section id="berita" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Berita Terbaru</h2>
+          <p>Informasi dan pengumuman seputar kegiatan gereja.</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card shadow-sm rounded">
+              <div class="card-body">
+                <h5 class="card-title">Retreat Pelayanan Pemuda-Pemudi</h5>
+                <p class="card-text">Retreat telah dilaksanakan di Desa Siallagan,Kecamatan. Ambarita, Kabupaten Samosir,pada 28-30 Maret 2025. Terimakasih Atas Partisipanya!!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm rounded">
+              <div class="card-body">
+                <h5 class="card-title">Kegiatan Natal 2024</h5>
+                <p class="card-text">Perayaan Natal 2024 berlangsung meriah. Lihat dokumentasinya di bawah ini!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card shadow-sm rounded">
+              <div class="card-body">
+                <h5 class="card-title">Pelayanan Baptisan</h5>
+                <p class="card-text">Baptisan akan diadakan Agustus 2025. Hubungi pendeta untuk pendaftaran.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Natal 2024 Galeri -->
+    <section id="natal2024" class="py-5">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Galeri Natal 2024</h2>
+          <p>Dokumentasi perayaan Natal 2024 Gereja Pentakosta Indonesia Sidang Sisingamangaraja Medan.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-3"><img src="images_natal_2024/images_natal_01.jpg" class="img-fluid rounded-shadow" alt="Natal 1"></div>
+          <div class="col-md-3"><img src="images_natal_2024/images_natal_02.jpg" class="img-fluid rounded-shadow" alt="Natal 2"></div>
+          <div class="col-md-3"><img src="images_natal_2024/images_natal_03.jpg" class="img-fluid rounded-shadow" alt="Natal 3"></div>
+          <div class="col-md-3"><img src="images_natal_2024/images_natal_04.jpg" class="img-fluid rounded-shadow" alt="Natal 4"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Natal 2024 Galeri -->
+    <section id="natal2024" class="py-5">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Galeri Retret 2025</h2>
+          <p>Dokumentasi perayaan Ret-Reat 2025 Gereja Pentakosta Indonesia Sidang Sisingamangaraja Medan.</p>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-3"><img src="images_retret_2025/retret_02.jpg" class="img-fluid rounded-shadow" alt="Natal 2"></div>
+          <div class="col-md-3"><img src="images_retret_2025/retret_03.jpg" class="img-fluid rounded-shadow" alt="Natal 3"></div>
+          <div class="col-md-3"><img src="images_retret_2025/retret_04.jpg" class="img-fluid rounded-shadow" alt="Natal 4"></div>
+          <div class="col-md-3"><img src="images_retret_2025/retret_05.jpg" class="img-fluid rounded-shadow" alt="Natal 4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partamiangan -->
+    <section id="partamiangan" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Jadwal Partamiangan (Otomatis)</h2>
+          <p class="text-muted">Informasi ini hanya muncul setiap hari Rabu dan diperbarui otomatis setiap minggu.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center" id="jadwalPartamiangan"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="py-5">
+      <div class="container">
+        <div class="text-center section-title">
+          <h2>Kontak Kami</h2>
+          <p>Hubungi kami untuk pertanyaan atau pelayanan lebih lanjut.</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-geo-alt-fill"></i> Jl.Rela, Sudirejo I.Kota Medan,Sumatera Utara</li>
+              <li class="list-group-item"><i class="bi bi-telephone-fill"></i> 081262242623 (Hasiholan Matondang)</li>
+              <li class="list-group-item"><i class="bi bi-envelope-fill"></i> gpi.smraja@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <small>&copy; 2025 Gereja Pentakosta Indonesia Sidang Sisingamangaraja Medan. All rights reserved.</small><br/>
+      <small>Dibuat oleh Hasiholan Matondang - Website GPI SM RAJA MEDAN</small>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      if (username.trim() === "" || password.trim() === "") {
+        alert("Username dan password wajib diisi!");
+        return;
+      }
+      if (username === "hasiholan.matondang" && password === "admin123") {
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("mainPage").style.display = "block";
+      } else {
+        alert("Username atau password salah!");
+      }
+    }
+
+    function logout() {
+      if (confirm("Yakin ingin keluar?")) {
+        location.reload();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const jadwalDiv = document.getElementById("jadwalPartamiangan");
+      const hariIni = new Date().getDay(); // 3 = Rabu
+      if (hariIni === 3) {
+        const tanggal = new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+        jadwalDiv.innerHTML = `<p>Hari ini adalah <strong>Rabu</strong> (${tanggal}). Partamiangan di rumah Ny. Nainggolan / Br. Zebua, Jl. Menteng 7 Gg Nasional Ujung.</p>`;
+      } else {
+        jadwalDiv.innerHTML = `<p class="text-muted">Jadwal Partamiangan hanya tersedia setiap hari <strong>Rabu</strong>.</p>`;
+      }
+
+      document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
